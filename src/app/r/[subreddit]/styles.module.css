@@ -1,0 +1,107 @@
+.postCollection {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    padding: 0;
+}
+
+.unreadPost {
+    position: relative;
+    background: var(--deep-dark-gray-palette);
+    color: var(--main-text-colour);
+    border: var(--dark-gray-palette) 1px solid;
+    padding: 5px;
+}
+
+.unreadPost:hover {
+    border-color: var(--light-gray-palette);
+}
+
+.readPost {
+    composes: unreadPost;
+    color: var(--dark-gray-palette);
+}
+
+.postInformation {
+    display: flex;
+    color: var(--dark-gray-palette);
+    flex-wrap: wrap;
+    font-weight: lighter;
+    flex-direction: row;
+    align-items: stretch;
+    font-size: inherit;
+    margin-top: 0.5em;
+    gap: 10px;
+}
+
+.primaryLink {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: inherit;
+}
+
+.primaryLink::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    content: "";
+}
+
+.interactive {
+    position: relative;
+    padding: 0;
+    background: none;
+    border-radius: 0.1em;
+    border: 0;
+    text-decoration: none;
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    z-index: 1;
+}
+
+.interactive:hover {
+    background-color: var(--light-gray-palette);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loadingSpinner {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+    border: 3px dashed var(--yellow-palette);
+    border-radius: 50%;
+    animation: 3s infinite normal linear spin;
+}
+
+.rediveButton {
+    background-color: inherit;
+    color: var(--yellow-palette);
+    border: var(--yellow-palette) 1px solid;
+}
+
+.rediveButton:enabled:hover {
+    box-shadow: 1px 1px var(--yellow-palette);
+    transform: translateY(-1px);
+}
+
+.rediveButton:disabled {
+    color: var(--dark-gray-palette);
+    border-color: var(--dark-gray-palette);
+    cursor: wait;
+}

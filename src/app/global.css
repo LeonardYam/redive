@@ -1,0 +1,36 @@
+/** Colour palette generated from https://coolors.co */
+:root {
+    --main-bg-colour: #000000;
+    --main-text-colour: #FFFFFF;
+    --yellow-palette: #FFD60A;
+    --orange-palette: #FCA311;
+    --blue-palette: #14213D;
+    --light-gray-palette: #E5E5E5;
+    --dark-gray-palette: #6C757D;
+    --deep-dark-gray-palette: #343536;
+    --main-margin: 0 30% 0 30%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--main-bg-colour);
+    color: var(--main-text-colour);
+    font-family: "Roboto Thin", monospace;
+}
+
+ol li {
+    list-style-type: none;
+}
+
+main {
+    margin: var(--main-margin);
+}
+
+@media (max-width: 1200px) {
+    main {
+        margin: 0;
+    }
+}
